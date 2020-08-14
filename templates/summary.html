@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>TRIVIA QUIZ APP!</title>
+  <style>
+  img {
+  border-radius: 90%;
+}
+body  {
+  background-color: #C8E18C;
+}
+.center {
+  margin: auto;
+  width: 50%;
+  height: 100%;
+  border: 3px solid #000000;
+  padding: 50px;
+}
+
+.heading {
+  text-align: center;
+}
+  </style>
+  </head>
+  <body >
+
+    <h1 class="heading">TRIVIA QUIZ APP !</h1><br>
+  <div class="center">
+    <h1 class="heading">SUMMARY</h1>
+    <h3 class="heading">Hello {{ recent_data.user_name }} ,<br>Here are the answers selected:</h3><br><br>
+  
+    <div class="form-group">
+        <b> Q1.) Who is the best cricketer in the world?</b><br>
+        <b> Answer:  {{ recent_data.best_player}} </b><br><br>
+
+        <b>Q2.) What are the colors in the national flag?</b><br>
+        <b> Answers : {{ recent_data.flag_color }} </b><br><br><br>
+
+      <a href="history" class="btn btn-primary">History</a>
+      <a href="index" class="btn btn-primary">Finish</a>
+   </div>
+  </div>
+  </body>
+  </html>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script

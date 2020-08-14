@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <title>TRIVIA QUIZ APP!</title>
+    <style>
+  img {
+  border-radius: 90%;
+}
+body  {
+  background-color: #BAC2A7;
+}
+.center {
+  margin: auto;
+  width: 50%;
+  height: 100%;
+  border: 3px solid #000000;
+  padding: 50px;
+}
+
+.heading {
+  text-align: center;
+}
+  </style>
+  </head>
+  <body>
+    <h1 class="heading">TRIVIA QUIZ APP !</h1><br>
+    <h1 class="heading">QUIZ HISTORY</h1>
+  <div class="center">
+  {% for records in data %}
+      <h3>Game No : {{ records.id }} </h3>
+      <h3>Name : {{ records.user_name }} </h3>
+      <h3>Best Player : {{ records.best_player }} </h3>
+      <h3>Flag Color : {{ records.flag_color }} </h3>
+      <hr><br>
+    {% endfor %}
+  <a href="summary" class="btn btn-primary">BACK</a>
+  </div>
+
+  </body>
+</html>

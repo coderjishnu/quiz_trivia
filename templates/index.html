@@ -1,1 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <title>TRIVIA QUIZ APP!</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+          $(document).ready(function()
+          {
+            $('.flag').click(function()
+            {
+                var txt="";
+                $('.flag:checked').each(function()
+                {
+                    txt+=$(this).val()+","
+                });
+                txt=txt.substring(0,txt.length-1);
+                $('#flag_id').val(text);
+            });
+          });
+    </script>
+    <style>
+      body  {
+        background-color: #E6E6FA;
+      }
+      .center {
+        margin: auto;
+        width: 50%;
+        height: 100%;
+        border: 3px solid #000000;
+        padding: 50px;
+      }
+
+      .heading {
+        text-align: center;
+      }
+
+      </style>
+  </head>
+  <body class="main">
+    <h1 class="heading">WELCOME TO <br>TRIVIA QUIZ APP !</h1>
+  <div class="center">
+        <img src="https://source.unsplash.com/1200x600/?quiz,classroom,exam" class="d-block w-100 mx-0" alt="..."><br>
+
+  <form id="user_data" method = "post" action="user_Data">
+  {% csrf_token %}
+
+  <div class="form-group">
+    <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Enter your name here" Required>
+  </div><br>
+
+  <label for="exampleInputEmail1"><b>Q1.) Who is the best cricketer in the world?</b></label><br>
+
+    <input type="radio" id="Sachin Tendulkar" name="best_player" value="Sachin Tendulkar">
+    <label for="Sachin Tendulkar">A) Sachin Tendulkar</label><br>
+    <input type="radio" id="Virat Kohli" name="best_player" value="Virat Kohli">
+    <label for="Virat Kohli">B) Virat Kohli</label><br>
+    <input type="radio" id="Adam Gilchirst" name="best_player" value="Adam Gilchirst">
+    <label for="Adam Gilchirst">C) Adam Gilchirst</label><br>
+    <input type="radio" id="Jacques Kallis" name="best_player" value="Jacques Kallis">
+    <label for="Jacques Kallis">D) Jacques Kallis</label><br><br>
+
+    <label for="exampleInputEmail1"><b>Q2.) What are the colors in the Indian national flag?</b></label><br>
+    
+    <input type="checkbox" id="flag" class="flag" name="flag" value="White">
+    <label for="vehicle1"> White</label><br>
+    <input type="checkbox" id="flag" class="flag" name="flag" value="Yellow">
+    <label for="Yellow"> Yellow</label><br>
+    <input type="checkbox" id="flag" class="flag" name="flag" value="Orange">
+    <label for="Orange"> Orange</label><br>
+    <input type="checkbox" id="flag" class="flag" name="flag" value="Green">
+    <label for="Green"> Green</label><br><br>  
+    
+    <input type="hidden" id="flag_id" class="flag_color" name="flag_color">
+    
+    <button type="submit" class="btn btn-primary">Submit</button><br><br>
+    <a href="history" class="btn btn-primary">History</a>
+
+
+  </form>
+  </div>
+
+  </body>
+</html>
